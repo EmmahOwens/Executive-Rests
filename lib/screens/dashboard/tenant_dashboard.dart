@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../services/auth_service.dart';
-import '../../models/user_model.dart';
 import '../../widgets/glass_container.dart';
 
 class TenantDashboard extends StatefulWidget {

@@ -58,6 +58,12 @@ dependencies:
   # Utilities
   intl: ^0.19.0
   shared_preferences: ^2.2.2
+  
+  # Analytics
+  firebase_analytics: ^10.8.0
+  
+  # Accessibility
+  accessibility_tools: ^0.2.0
   image_picker: ^1.0.5
   url_launcher: ^6.2.2
   path_provider: ^2.1.1

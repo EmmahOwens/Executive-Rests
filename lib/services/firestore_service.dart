@@ -83,13 +83,13 @@ class FirestoreService {
     // Search by title
     final QuerySnapshot titleResults = await _propertiesCollection
         .where('title', isGreaterThanOrEqualTo: query)
-        .where('title', isLessThanOrEqualTo: query + '\uf8ff')
+        .where('title', isLessThanOrEqualTo: '$query\uf8ff')
         .get();
 
     // Search by location
     final QuerySnapshot locationResults = await _propertiesCollection
         .where('location', isGreaterThanOrEqualTo: query)
-        .where('location', isLessThanOrEqualTo: query + '\uf8ff')
+        .where('location', isLessThanOrEqualTo: '$query\uf8ff')
         .get();
 
     // Combine results

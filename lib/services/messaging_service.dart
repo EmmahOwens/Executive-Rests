@@ -98,7 +98,7 @@ class MessagingService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .map((doc) => doc.data() as Map<String, dynamic>)
+          .map((doc) => doc.data())
           .toList();
     });
   }
@@ -118,7 +118,7 @@ class MessagingService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .map((doc) => doc.data() as Map<String, dynamic>)
+          .map((doc) => doc.data())
           .toList();
     });
   }

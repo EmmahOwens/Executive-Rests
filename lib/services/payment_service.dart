@@ -61,7 +61,7 @@ class PaymentService {
           'propertyId': propertyId,
           'paymentType': paymentType,
           'status': 'completed',
-          'paymentMethod': response.mobileMoneyUgandaToken != null ? 'Mobile Money' : 'Card',
+          'paymentMethod': response.paymentType ?? 'Card',
           'transactionReference': response.transactionId,
           'timestamp': FieldValue.serverTimestamp(),
         };
@@ -96,7 +96,7 @@ class PaymentService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .map((doc) => doc.data() as Map<String, dynamic>)
+          .map((doc) => doc.data())
           .toList();
     });
   }
@@ -110,7 +110,7 @@ class PaymentService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .map((doc) => doc.data() as Map<String, dynamic>)
+          .map((doc) => doc.data())
           .toList();
     });
   }
